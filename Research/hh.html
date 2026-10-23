@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AMA COMPASS helps students explore programs, compare study options, review admission guidance, and send inquiries.">
+  <title>AMA COMPASS | AMA College Cavite</title>
+  <link rel="stylesheet" href="cs.css">
+  <link rel="stylesheet" href="rr.css">
+  <script src="js.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#home" aria-label="AMA COMPASS home">
+    <span class="ama-mark">AMA<small>CAVITE</small></span>
+    <span class="brand-rule"></span>
+    <span class="brand-copy">
+      <strong>AMA COMPASS</strong>
+      <small>Program Comparison and Admission Assistance</small>
+    </span>
+  </a>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+
+  <nav class="nav-links" id="navLinks">
+    <a class="nav-link active" href="#home">Home</a>
+    <a class="nav-link" href="#programs">Programs</a>
+    <a class="nav-link" href="#recommendation">Find My Program</a>
+    <a class="nav-link" href="#compare">Compare Programs</a>
+    <a class="nav-link" href="#admission">Admissions</a>
+    <a class="nav-link" href="#campuses">Campus</a>
+    <a class="nav-link" href="#resources">Resources</a>
+    <a class="nav-link" href="#contact">Contact</a>
+    <a class="nav-cta" href="#inquiry">Send Inquiry</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-shade"></div>
+    <div class="hero-content">
+      <span class="eyebrow">YOUR FUTURE STARTS HERE</span>
+      <h1>Find Your Path with<br><span>AMA COMPASS</span></h1>
+      <p>Explore programs, compare your options, and get clear guidance for your next step.</p>
+      <a class="button button-red" href="#programs">Explore Programs <span>→</span></a>
+    </div>
+    <div class="hero-caption">
+      <span class="caption-dot"></span>
+      Student-centered program guidance
+    </div>
+  </section>
+
+  <section class="search-wrap" aria-label="Find a program">
+    <form class="search-bar" id="searchForm">
+      <span class="search-symbol" aria-hidden="true">⌕</span>
+      <input id="searchInput" type="search" placeholder="Search for a program or strand..." aria-label="Search for a program or strand">
+
+      <select id="levelFilter" aria-label="Filter education level">
+        <option value="all">All Levels</option>
+        <option value="College">College</option>
+        <option value="Senior High School">Senior High School</option>
+      </select>
+
+      <select id="fieldFilter" aria-label="Filter program field">
+        <option value="all">All Fields</option>
+        <option value="Technology">Technology</option>
+        <option value="Engineering">Engineering</option>
+        <option value="Business">Business</option>
+        <option value="Science">Science</option>
+        <option value="Humanities">Humanities</option>
+      </select>
+
+      <button class="button button-red search-button" type="submit">Search</button>
+    </form>
+  </section>
+
+  <section class="quick-links section-shell" aria-label="Main features">
+    <a class="quick-card" href="#programs">
+      <span class="quick-icon">▤</span>
+      <span><strong>Explore Programs</strong><small>Discover college programs and SHS strands.</small></span>
+      <b>→</b>
+    </a>
+    <a class="quick-card" href="#recommendation">
+      <span class="quick-icon">✦</span>
+      <span><strong>Find My Program</strong><small>Get suggestions based on your skills and interests.</small></span>
+      <b>→</b>
+    </a>
+    <a class="quick-card" href="#compare">
+      <span class="quick-icon">⚖</span>
+      <span><strong>Compare Programs</strong><small>Review core subjects and career paths.</small></span>
+      <b>→</b>
+    </a>
+    <a class="quick-card" href="#admission">
+      <span class="quick-icon">▣</span>
+      <span><strong>Admission Guide</strong><small>Learn the general steps for applying.</small></span>
+      <b>→</b>
+    </a>
+    <a class="quick-card" href="#inquiry">
+      <span class="quick-icon">✉</span>
+      <span><strong>Inquiry System</strong><small>Send your questions to the school.</small></span>
+      <b>→</b>
+    </a>
+  </section>
+
+  <section class="guide-section section-shell">
+    <div class="guide-intro">
+      <span class="eyebrow">START WITH CONFIDENCE</span>
+      <h2>Your Guide to Choosing<br>a Program</h2>
+      <p>Take the next step with confidence. Follow these three simple steps.</p>
+    </div>
+
+    <div class="guide-steps">
+      <article class="step-card">
+        <span class="step-number">01</span>
+        <span class="step-symbol">◎</span>
+        <h3>Know Your Interests</h3>
+        <p>Think about what you enjoy and what you are good at.</p>
+      </article>
+      <span class="step-arrow">›</span>
+      <article class="step-card">
+        <span class="step-number">02</span>
+        <span class="step-symbol">⚖</span>
+        <h3>Understand Your Options</h3>
+        <p>Compare program subjects, skills, and possible career paths.</p>
+      </article>
+      <span class="step-arrow">›</span>
+      <article class="step-card">
+        <span class="step-number">03</span>
+        <span class="step-symbol">✓</span>
+        <h3>Make Your Decision</h3>
+        <p>Choose a path that matches your goals and interests.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- FIND MY PROGRAM -->
+  
+<section class="recommendation-section section-shell" id="recommendation">
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">PERSONALIZED PROGRAM GUIDANCE</span>
+      <h2>Find My Program</h2>
+      <p>Answer a few questions to see which programs may fit your skills, interests, and future goals.</p>
+    </div>
+  </div>
+
+  <div class="survey-card">
+    <div class="survey-progress">
+      <span>PROGRAM MATCH SURVEY</span>
+      <span>ABOUT 2 MINUTES</span>
+    </div>
+
+    <form id="recommendationForm">
+      <fieldset class="survey-field">
+        <legend>1. What level are you choosing for?</legend>
+        <div class="survey-options">
+          <label class="survey-option">
+            <input type="radio" name="targetLevel" value="College" checked required>
+            College program
+          </label>
+          <label class="survey-option">
+            <input type="radio" name="targetLevel" value="Senior High School" required>
+            Senior High School strand
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- COLLEGE COURSE OPTIONS ONLY -->
+      <div class="survey-field" id="collegeCourseField">
+        <label for="collegeCourse">2. Which college course are you interested in?</label>
+        <select id="collegeCourse" name="collegeCourse">
+          <option value="">No specific course yet</option>
+          <option value="bsit">BS Information Technology (BSIT)</option>
+          <option value="bscs">BS Computer Science (BSCS)</option>
+          <option value="bsce">BS Computer Engineering</option>
+          <option value="bsece">BS Electronics Engineering</option>
+          <option value="bsba-marketing">BSBA - Marketing Management</option>
+          <option value="bsba-hrm">BSBA - Human Resource Management</option>
+          <option value="bsba-fm">BSBA - Financial Management</option>
+          <option value="bsa">BS Accountancy (BSA)</option>
+        </select>
+        <small>Optional. Leave blank if you want suggestions based on your interests.</small>
+      </div>
+
+      <!-- SHS STRAND OPTIONS ONLY -->
+      <div class="survey-field" id="seniorHighCourseField" hidden>
+        <label for="seniorHighCourse">2. Which Senior High School strand are you interested in?</label>
+        <select id="seniorHighCourse" name="seniorHighCourse" disabled>
+          <option value="">No specific strand yet</option>
+          <option value="stem">STEM</option>
+          <option value="abm-tvl">ABM-TVL</option>
+          <option value="prog">PROG</option>
+          <option value="humss">HUMSS</option>
+        </select>
+        <small>Optional. Leave blank if you want to explore the available strands.</small>
+      </div>
+
+      <!-- COLLEGE SKILLS ONLY -->
+      <fieldset class="survey-field" id="collegeSkillsField">
+        <legend>3. Which skills or activities do you enjoy? Choose all that apply.</legend>
+        <p class="survey-hint">Select at least one.</p>
+        <div class="survey-options">
+          <label class="survey-option"><input type="checkbox" name="collegeSkills" value="programming"> Coding, apps, or websites</label>
+          <label class="survey-option"><input type="checkbox" name="collegeSkills" value="logic"> Logic and solving complex problems</label>
+          <label class="survey-option"><input type="checkbox" name="collegeSkills" value="hardware"> Computers, gadgets, or hardware</label>
+          <label class="survey-option"><input type="checkbox" name="collegeSkills" value="electronics"> Electronics, circuits, or communication devices</label>
+          <label class="survey-option"><input type="checkbox" name="collegeSkills" value="creative"> Creative ideas, design, or promotion</label>
+          <label class="survey-option"><input type="checkbox" name="collegeSkills" value="people"> Helping people or organizing a team</label>
+          <label class="survey-option"><input type="checkbox" name="collegeSkills" value="numbers"> Numbers, budgeting, or financial planning</label>
+          <label class="survey-option"><input type="checkbox" name="collegeSkills" value="detail"> Accurate, organized, detail-focused work</label>
+          <label class="survey-option"><input type="checkbox" name="collegeSkills" value="research"> Research, science, and investigation</label>
+          <label class="survey-option"><input type="checkbox" name="collegeSkills" value="communication"> Writing, speaking, or understanding society</label>
+        </div>
+      </fieldset>
+
+      <!-- SHS INTERESTS ONLY -->
+      <fieldset class="survey-field" id="seniorHighSkillsField" hidden disabled>
+        <legend>3. Which subjects or activities interest you? Choose all that apply.</legend>
+        <p class="survey-hint">Select at least one.</p>
+        <div class="survey-options">
+          <label class="survey-option"><input type="checkbox" name="shsSkills" value="technology"> Computers and technology</label>
+          <label class="survey-option"><input type="checkbox" name="shsSkills" value="math"> Mathematics and problem-solving</label>
+          <label class="survey-option"><input type="checkbox" name="shsSkills" value="science"> Science and experiments</label>
+          <label class="survey-option"><input type="checkbox" name="shsSkills" value="business"> Business and entrepreneurship</label>
+          <label class="survey-option"><input type="checkbox" name="shsSkills" value="finance"> Money management and accounting</label>
+          <label class="survey-option"><input type="checkbox" name="shsSkills" value="creative"> Creative projects and ideas</label>
+          <label class="survey-option"><input type="checkbox" name="shsSkills" value="people"> Helping people and working in groups</label>
+          <label class="survey-option"><input type="checkbox" name="shsSkills" value="research"> Research and investigation</label>
+          <label class="survey-option"><input type="checkbox" name="shsSkills" value="communication"> Writing, speaking, and social issues</label>
+        </div>
+      </fieldset>
+
+      <!-- COLLEGE CAREER OPTIONS ONLY -->
+      <div class="survey-field" id="collegeCareerField">
+        <label for="careerPreference">4. Which type of future work sounds most interesting?</label>
+        <select id="careerPreference" name="careerPreference">
+          <option value="">Choose your preference</option>
+          <option value="technology">Technology and software</option>
+          <option value="engineering">Engineering, devices, and systems</option>
+          <option value="business">Business, marketing, or management</option>
+          <option value="finance">Accounting, finance, and numbers</option>
+          <option value="people">People, communication, and community</option>
+          <option value="science">Science, research, and mathematics</option>
+          <option value="undecided">I am still exploring</option>
+        </select>
+      </div>
+
+      <!-- SHS FIELD OPTIONS ONLY -->
+      <div class="survey-field" id="seniorHighCareerField" hidden>
+        <label for="seniorHighCareerPreference">4. Which subjects or future fields interest you most?</label>
+        <select id="seniorHighCareerPreference" name="seniorHighCareerPreference" disabled>
+          <option value="">Choose your preference</option>
+          <option value="technology">Computers and technology</option>
+          <option value="math">Mathematics and problem-solving</option>
+          <option value="science">Science and research</option>
+          <option value="business">Business and entrepreneurship</option>
+          <option value="finance">Accounting and finance</option>
+          <option value="humanities">Communication, people, and society</option>
+          <option value="undecided">I am still exploring</option>
+        </select>
+      </div>
+
+      <p class="survey-error" id="surveyError" role="alert" hidden>
+        Please select at least one skill or interest and choose a preference.
+      </p>
+
+      <div class="survey-actions">
+        <button class="button button-red survey-submit" type="submit">Show My Recommendations →</button>
+        <button class="button button-outline" id="clearRecommendation" type="button">Clear Survey</button>
+      </div>
+
+      <p class="survey-disclaimer">
+        Suggestions are based on your answers and general program descriptions. They are not an admission decision or a guarantee of success. Confirm official program availability and curriculum with AMA College Cavite.
+      </p>
+    </form>
+
+    <div class="recommendation-results" id="recommendationResults" aria-live="polite" hidden>
+      <div class="results-heading">
+        <span class="eyebrow">YOUR RESULTS</span>
+        <h3>Programs to Explore</h3>
+        <p id="recommendationIntro">These options may fit your selected interests and skills.</p>
+      </div>
+      <div class="recommendation-grid" id="recommendationGrid"></div>
+      <button class="button button-outline" id="retakeRecommendation" type="button">Retake Survey</button>
+    </div>
+  </div>
+</section>
+
+  <!-- PROGRAMS -->
+  <section class="programs-section section-shell" id="programs">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">FIND YOUR DIRECTION</span>
+        <h2>Explore Programs</h2>
+        <p>Browse options and open a program to learn more.</p>
+      </div>
+      <span class="count-pill" id="resultCount">12 programs</span>
+    </div>
+    <div class="program-grid" id="programGrid" aria-live="polite"></div>
+    <p class="empty-state" id="emptyState" hidden>No matching programs found. Try changing your search or filters.</p>
+  </section>
+
+  <!-- COMPARISON -->
+  <section class="compare-section" id="compare">
+    <div class="section-shell">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">MAKE AN INFORMED CHOICE</span>
+          <h2>Program Comparison</h2>
+          <p>Select two different programs to compare core subjects and possible career paths.</p>
+        </div>
+      </div>
+
+      <div class="compare-panel">
+        <div class="program-selectors">
+          <div class="form-field">
+            <label for="compareProgram1">Select Program 1</label>
+            <select id="compareProgram1"><option value="">Choose first program</option></select>
+          </div>
+          <span class="comparison-arrow" aria-hidden="true">➜</span>
+          <div class="form-field">
+            <label for="compareProgram2">Select Program 2</label>
+            <select id="compareProgram2"><option value="">Choose second program</option></select>
+          </div>
+        </div>
+        <div class="table-scroll" id="comparisonOutput" aria-live="polite">
+          <p class="compare-placeholder">Select two programs to view the comparison.</p>
+        </div>
+        <p class="compare-note">Comparison information is for general guidance. Confirm official curriculum details with AMA College Cavite.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADMISSION GUIDE -->
+  <section class="admission-section section-shell" id="admission">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">YOUR NEXT STEP</span>
+        <h2>Admission Guide</h2>
+        <p>Use these general steps as a starting point. Requirements may differ by applicant type.</p>
+      </div>
+    </div>
+
+    <div class="admission-layout">
+      <div class="admission-tabs">
+        <button class="admission-tab active" type="button" data-admission="new">New Student</button>
+        <button class="admission-tab" type="button" data-admission="transferee">Transferee</button>
+        <button class="admission-tab" type="button" data-admission="shs">Senior High School</button>
+        <button class="admission-tab" type="button" data-admission="international">International Applicant</button>
+      </div>
+
+      <article class="admission-content" id="admissionContent">
+        <h3>New Student: General Guide</h3>
+        <ol>
+          <li>Choose your preferred program.</li>
+          <li>Contact the admissions office for the current list of requirements.</li>
+          <li>Prepare and submit the documents requested by the school.</li>
+          <li>Confirm application steps, fees, deadlines, and enrollment instructions with authorized personnel.</li>
+        </ol>
+      </article>
+    </div>
+
+    <div class="notice">
+      <strong>Please note:</strong> This is a student-project prototype, not an official admissions checklist. Verify all requirements, deadlines, fees, and program availability directly with AMA College Cavite.
+    </div>
+  </section>
+
+  <!-- CAMPUS -->
+  <section class="campus-section" id="campuses">
+    <div class="section-shell campus-layout">
+      <div class="campus-photo">
+        <img src="ama-cavite.jpg" alt="AMA College Cavite campus building">
+      </div>
+      <div class="campus-copy">
+        <span class="eyebrow">GET TO KNOW THE CAMPUS</span>
+        <h2>AMA College Cavite</h2>
+        <p>Explore program options and prepare your questions before contacting the school. For official campus details, office hours, and directions, confirm information with AMA College Cavite.</p>
+        <a class="button button-outline" href="#inquiry">Ask a Question →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESOURCES -->
+  <section class="resources-section section-shell" id="resources">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">HELPFUL INFORMATION</span>
+        <h2>Student Resources</h2>
+        <p>Quick starting points for common questions from prospective students.</p>
+      </div>
+    </div>
+
+    <div class="resource-grid">
+      <details class="resource-card">
+        <summary>What program should I choose?</summary>
+        <p>Start with your interests, preferred subjects, strengths, and future goals. Use the program comparison tool, then ask the school about the official curriculum.</p>
+      </details>
+      <details class="resource-card">
+        <summary>Where can I confirm admission requirements?</summary>
+        <p>Contact the admissions office directly. Requirements may vary for new students, transferees, SHS applicants, and international applicants.</p>
+      </details>
+      <details class="resource-card">
+        <summary>Can I ask about a program before applying?</summary>
+        <p>Yes. Use the inquiry form below to prepare a question. This prototype does not send messages until a backend is connected.</p>
+      </details>
+      <details class="resource-card">
+        <summary>Are tuition fees and scholarships listed here?</summary>
+        <p>Fees, scholarships, and eligibility can change. Confirm current information and deadlines with the school before making a decision.</p>
+      </details>
+    </div>
+
+    <div class="announcement-note">
+      <strong>Announcements:</strong> Official announcements and scholarship updates are not connected in this prototype. Add verified school announcements here when an approved information source is available.
+    </div>
+  </section>
+
+  <!-- INQUIRY -->
+  <section class="inquiry-section" id="inquiry">
+    <div class="section-shell inquiry-layout">
+      <div class="inquiry-copy">
+        <span class="eyebrow">WE'RE HERE TO HELP</span>
+        <h2>Have Questions?<br>Send an Inquiry.</h2>
+        <p>Tell us what you would like to know about programs or admissions. Your request will be validated in this demo, but it will not be sent or stored until a backend is connected.</p>
+        <div class="inquiry-prompt">
+          <span>✦</span>
+          <p>Tip: Include your applicant type and program of interest so school personnel can better understand your question.</p>
+        </div>
+      </div>
+
+      <form class="inquiry-form" id="inquiryForm">
+        <h3>Inquiry System</h3>
+        <p class="form-description">Fields marked with * are required.</p>
+
+        <div class="form-field">
+          <label for="studentName">Name *</label>
+          <input id="studentName" name="studentName" type="text" placeholder="Enter your name" required maxlength="100">
+        </div>
+
+        <div class="form-field">
+          <label for="studentEmail">Email *</label>
+          <input id="studentEmail" name="studentEmail" type="email" placeholder="you@example.com" required maxlength="150">
+        </div>
+
+        <div class="form-field">
+          <label for="applicantType">Applicant Type *</label>
+          <select id="applicantType" name="applicantType" required>
+            <option value="">Choose applicant type</option>
+            <option>Incoming College Student</option>
+            <option>Transferee</option>
+            <option>Senior High School Student</option>
+            <option>Parent or Guardian</option>
+            <option>International Applicant</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="inquiryProgram">Program of Interest</label>
+          <select id="inquiryProgram" name="inquiryProgram">
+            <option value="">Not yet decided</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" rows="4" placeholder="Write your question here..." required maxlength="1500"></textarea>
+        </div>
+
+        <button class="button button-red submit-button" type="submit">Submit Inquiry →</button>
+        <p class="form-status" id="formStatus" role="status">Demo only: no inquiry will be sent or saved.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section section-shell" id="contact">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">GET IN TOUCH</span>
+        <h2>Contact Us</h2>
+        <p>Have questions about programs or admissions? You can reach us using the contact details below.</p>
+      </div>
+    </div>
+
+    <div class="contact-grid">
+      <article class="contact-card">
+        <span class="contact-icon" aria-hidden="true">✉</span>
+        <div>
+          <h3>Email Address</h3>
+          <p><a href="mailto:Kishmiller02@gmail.com">Kishmiller02@gmail.com</a></p>
+        </div>
+      </article>
+
+      <article class="contact-card">
+        <span class="contact-icon" aria-hidden="true">☎</span>
+        <div>
+          <h3>Contact Number</h3>
+          <p><a href="tel:+6391799023445">091799023445</a></p>
+        </div>
+      </article>
+    </div>
+
+    <p class="contact-note">Student project contact details. Please confirm official school contact information with AMA College Cavite.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-main">
+    <div>
+      <strong class="footer-logo">AMA COMPASS</strong>
+      <p>Program Comparison and Admission Assistance</p>
+    </div>
+    <div class="footer-links">
+      <a href="#programs">Programs</a>
+      <a href="#compare">Compare</a>
+      <a href="#admission">Admissions</a>
+      <a href="#resources">FAQs</a>
+      <a href="#contact">Contact</a>
+      <a href="#inquiry">Send Inquiry</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>AMA COMPASS · Student-centered guidance</span>
+    <span>Student project prototype · <span id="currentYear"></span></span>
+  </div>
+</footer>
+
+<dialog id="programDialog" class="program-dialog">
+  <button class="dialog-close" id="closeDialog" aria-label="Close details">×</button>
+  <div id="dialogContent"></div>
+</dialog>
+</body>
+</html>
